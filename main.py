@@ -4,12 +4,12 @@ import menu
 dbMan = dbManager.DataBaseManager()
 menu.menu()
 
-dbMan.ReadRecord("users")
+dbMan.read_record("users")
 
-dbMan.ReadRecord("cars")
+dbMan.read_record("cars")
 
 
-dbManager.DataBaseManager.ReadRecord( table = "user")
+dbManager.DataBaseManager().read_record(table="user")
 
 
 # menu()

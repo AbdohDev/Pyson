@@ -1,7 +1,7 @@
 # def main():
 #     menu()
 
-#Menu File
+# Menu File
 
 def menu():
     print("----- Welcome to SCRS -----")
@@ -10,23 +10,23 @@ def menu():
     print("[3] Guest Session")
     print("[0] Exit")
 
+
 menu()
 option = int(input("\nSelect an Option: "))
 
 while option != 0:
     if option == 1:
-        #do option one signin
+        # do option one signin
         print("option signin")
     elif option == 2:
-        #do option two signup
+        # do option two signup
         print("option signup")
     elif option == 3:
-        #do option three guest
+        # do option three guest
         print("option guest")
     else:
         print("Thank you for using SCRS")
 
-    print()
     # menu()
     option = int(input("\nSelect an Option: "))
 
@@ -34,7 +34,6 @@ print("thanks for using SCRS")
 # def signin():
 #     print("this is where you sign in")
 # print (menu())
-
 
 
 # menu()
