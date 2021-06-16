@@ -1,1 +1,6 @@
-pruis
+1,car1,comp1,0
+toyota,pruis
+toyota,pruis
+haid,car
+mors,rabbit
+toyota,pruis,2021

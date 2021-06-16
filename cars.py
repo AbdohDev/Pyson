@@ -1,20 +1,47 @@
+from dbManager import DataBaseManager
+
+
 # cars database
 class Car:
-    """car database manager"""
-
-    def __init__(self, id, company, model, year, cost):
-        self.id = input_car_company
+    def __init__(self, carplate, company, model, year, cost):
+        self.carplate = carplate
         self.company = company
         self.model = model
         self.year = year
         self.cost = cost
+        
 
-    input_car_company = input("Input car company: ")
-    # input_car_model = input("Input car model: ")
-    # input_car_year = input("Input car manifacturing year: ")
-    # input_car_cost = input("Input car cost per day: ")
+class CarManager:
+    def __init__(self):
+        self.fill_all_cars()
+        
+    cars = []
+    
+    def fill_car(self, car_record):
+        car_data = str(car_record).split(',')
+        
+        car = Car(cost=car_data[1], company=car_data[2], carplate=car_data[0], model=car_data[1], year=car_data[3])
 
+        return car
+    
+    def fill_all_cars(self):
+        if self.cars.__len__() > 0:
+            return
 
-asd = (input_car_company, nput_car_model,
-       input_car_year, input_car_cost)
-print(asd)
+        cars_records = DataBaseManager().read_all('cars')
+
+        for record in cars_records:
+            self.cars.append(self.fill_car(record))
+
+    def find_car_by_carplate(self, carplate):
+        if self.cars.__len__() == 0:
+            return None
+            
+        for car in self.cars:
+            if car.carplate == carplate:
+                return car
+
+        return None
+        
+    def add_car(self, company, model, year):
+        DataBaseManager().create_record("cars",company +"," + model + "," + year)

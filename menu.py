@@ -4,12 +4,14 @@
 # Menu File
 from auth.login import login
 from auth.signup import Signup
+from auth.add_car import add_car
 
 def menu():
     print("----- Welcome to SCRS -----")
     print("[1] Login")
     print("[2] Sign up")
     print("[3] Guest Session")
+    print("[4] add car")
     print("[0] Exit")
 
 
@@ -26,6 +28,10 @@ while option != 0:
     elif option == 3:
         # do option three guest
         print("option guest")
+        #add car funtion will be placed under Admin login
+    elif option == 4:
+        print("option add car")
+        add_car()
     else:
         print("Thank you for using SCRS")
 
