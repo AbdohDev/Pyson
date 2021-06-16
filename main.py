@@ -9,9 +9,6 @@ dbMan.read_record("users")
 dbMan.read_record("cars")
 
 
-dbManager.DataBaseManager().read_record(table="user")
-
-
 # menu()
 # option = int(input("Enter your option: "))
 
