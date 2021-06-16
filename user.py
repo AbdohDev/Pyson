@@ -42,3 +42,6 @@ class UserManager:
                 return user
 
         return None
+
+    def create_user(self, username, password):
+        DataBaseManager().create_record("users",username +"," + password)

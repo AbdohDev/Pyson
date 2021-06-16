@@ -2,6 +2,7 @@ from util.validations import username_validation, password_validation
 
 
 def login():
+    print("I am in login")
     is_valid = False
     username = ""
     message = ""
@@ -9,6 +10,7 @@ def login():
 
     while not is_valid:
         print(message)
+        print("I am in is_valid")
         username = str(input("\nUsername: "))
 
         is_valid, message, user = username_validation(username)

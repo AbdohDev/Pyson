@@ -3,11 +3,11 @@
 
 # Menu File
 from auth.login import login
-
+from auth.signup import Signup
 
 def menu():
     print("----- Welcome to SCRS -----")
-    print("[1] Sign in")
+    print("[1] Login")
     print("[2] Sign up")
     print("[3] Guest Session")
     print("[0] Exit")
@@ -18,11 +18,11 @@ option = int(input("\nSelect an Option: "))
 
 while option != 0:
     if option == 1:
-        print("option signin")
+        print("I am in menu login")
         login()
     elif option == 2:
-        # do option two signup
-        print("option signup")
+        print("I am in menu signup")
+        Signup()
     elif option == 3:
         # do option three guest
         print("option guest")

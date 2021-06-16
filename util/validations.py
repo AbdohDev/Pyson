@@ -23,3 +23,15 @@ def password_validation(user, password):
         return False, "Enter a correct password"
 
     return True, ""
+
+def username_signup(username):
+    print("doing username_signup")
+    if str(username).__len__() == 0:
+        return False, "Please enter the valid username", None
+
+    user = UserManager().find_user_by_username(str(username).strip())
+
+    if user is not None:
+        UserManager().create_user(username)
+
+    return True, "", username

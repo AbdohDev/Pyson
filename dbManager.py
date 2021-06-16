@@ -3,14 +3,12 @@ import os
 
 class DataBaseManager:
 
-    def create_record(self):
-        pass
+    def create_record(self, table, content):
+        print("I am in dbManager create record")
+        with open(os.path.join("db", table + ".txt"), "a") as fh:
+            fh.write(content + "\n")
 
-    # with open("users.txt", "w") as fh:
-    #     fh.write("abdoh")
 
-    with open("db/users.txt", "a") as fh:
-        fh.write("a")
 
     def read_record(self, table):
         with open(os.path.join("db", table + ".txt"), "r") as fh:
