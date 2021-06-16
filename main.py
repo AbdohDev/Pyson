@@ -1,22 +1,16 @@
 # printing the starting line  
-import dbManager.DataBaseManager as dbMan
-
-# dbMan = dbManager.DataBaseManager()
+import dbManager
+import menu
+dbMan = dbManager.DataBaseManager()
+menu.menu()
 
 dbMan.ReadRecord("users")
 
 dbMan.ReadRecord("cars")
 
 
-# dbManager.DataBaseManager.ReadRecord( table = "user")
+dbManager.DataBaseManager.ReadRecord( table = "user")
 
-# print("---welcome to car rent---")
-
-# def menu():
-#     print("[1] Sign in")
-#     print("[2] Sign up")
-#     print("[3] Guest Login")
-#     print("[0] Exit")  
 
 # menu()
 # option = int(input("Enter your option: "))
