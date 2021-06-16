@@ -1,3 +1,6 @@
+import os
+
+
 class DataBaseManager:
 
     def create_record(self):
@@ -10,7 +13,7 @@ class DataBaseManager:
         fh.write("a")
 
     def read_record(self, table):
-        with open("db/" + table + ".txt", "r") as fh:
+        with open(os.path.join("db", table + ".txt"), "r") as fh:
             line = fh.readline()
             print(line)
 
