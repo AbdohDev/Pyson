@@ -1,6 +1,5 @@
-1,car1,comp1,0
 toyota,pruis
-toyota,pruis
+samsugn,phone
 haid,car
 mors,rabbit
-toyota,pruis,2021
+toyota,shas,2021

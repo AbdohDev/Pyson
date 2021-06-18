@@ -1,10 +1,10 @@
-# def main():
-#     menu()
 
 # Menu File
+
 from auth.login import login
 from auth.signup import Signup
 from auth.add_car import add_car
+from cars import CarManager
 
 def menu():
     print("----- Welcome to SCRS -----")
@@ -12,6 +12,7 @@ def menu():
     print("[2] Sign up")
     print("[3] Guest Session")
     print("[4] add car")
+    print("[5] read cars ")
     print("[0] Exit")
 
 
@@ -32,6 +33,9 @@ while option != 0:
     elif option == 4:
         print("option add car")
         add_car()
+    elif option == 5:
+        print("read all cars")
+        CarManager().read_cars()
     else:
         print("Thank you for using SCRS")
 
@@ -52,11 +56,11 @@ option = int(input("\nSelect an Option: "))
 
 while option != 0:
     if option == 1:
-        print("I am in menu login")
-        login()
+        print("option add car")
+        add_car()
     elif option == 2:
         print("I am in menu signup")
-        Signup()
+        # fill_all_cars()
     elif option == 3:
         # do option three guest
         print("option guest")

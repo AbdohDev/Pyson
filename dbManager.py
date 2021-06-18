@@ -17,22 +17,23 @@ class DataBaseManager:
             return line
 
     def read_all(self, table):
+        print("I am in dbManager read all")
         all_records = []
 
         with open(os.path.join("db", table + ".txt"), "r") as fh:
-            line = fh.readline()
+            line = fh.readlines()
             all_records.append(line)
 
         return all_records
 
-    # TODO: This function may be updated if the database files become more complex
-    def query(self, table, condition):
-        with open(os.path.join("db", table + ".txt"), "r") as fh:
-            line = fh.readline()
-            if str(line).strip() == str(condition).strip():
-                return line
+    # # TODO: This function may be updated if the database files become more complex
+    # def query(self, table, condition):
+    #     with open(os.path.join("db", table + ".txt"), "r") as fh:
+    #         line = fh.readline()
+    #         if str(line).strip() == str(condition).strip():
+    #             return line
 
-        return None
+    #     return None
 
     def update_record(self):
         pass

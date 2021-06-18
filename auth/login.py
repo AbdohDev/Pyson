@@ -1,5 +1,5 @@
 from util.validations import username_validation, password_validation
-
+from user import UserManager
 
 def login():
     print("I am in login")
@@ -25,5 +25,18 @@ def login():
             is_valid, message = password_validation(user, password)
 
         if is_valid:
-            print("welcome back " + username)
+            print("Is valid")
+            
+            # DataBaseManager().query("users", username)
+            theUser = UserManager().find_user_by_username(username)
+            print(theUser.type)
+            # if theUser.type == 0
+            if theUser.type == "0":
+                print("Welcome back Normie: " + username)
+
+            if theUser.type == "2":
+                print("Welcome back ADMIN: " + username)
+            
             # TODO: Check Privileges and continue submenu work
+            
+        

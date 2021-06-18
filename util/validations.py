@@ -24,6 +24,15 @@ def password_validation(user, password):
 
     return True, ""
 
+def type_validation(user, password, type):
+    if str(type).__len__() <= 4:
+        return False, "Password Length should be at least 5 characters"
+
+    if user.type != str(2).strip():
+        return False, "the type is wrong"
+
+    return True, ""
+
 def username_signup(username):
     print("doing username_signup")
     if str(username).__len__() == 0:
