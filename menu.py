@@ -38,45 +38,48 @@ while option != 0:
     # menu()
     option = int(input("\nSelect an Option: "))
 
+def admin():
+    print("----- Admin Access -----")
+    print("[1] Add a car")
+    print("[2] Display cars")
+    print("[3] Search cars")
+    print("[4] Return a rented car")
+    print("[0] Exit")
+    
+    
+admin()
+option = int(input("\nSelect an Option: "))
+
+while option != 0:
+    if option == 1:
+        print("I am in menu login")
+        login()
+    elif option == 2:
+        print("I am in menu signup")
+        Signup()
+    elif option == 3:
+        # do option three guest
+        print("option guest")
+        #add car funtion will be placed under Admin login
+    elif option == 4:
+        print("option add car")
+        add_car()
+    else:
+        print("Thank you for using SCRS")
+
+def guest():
+    print("----- Guest Session -----")
+    print("[1] View all cars available for rent")
+    print("[2] Register an account")
+    print("[0] Exit")
+
+
+def user():
+    print("----- User Access -----")
+    print("[1] View Booking History") #then select and book a car for a specific time # then confirm payment
+    print("[2] View all cars available for rent")
+    print("[0] Exit")
+
+
+
 print("thanks for using SCRS")
-# def signin():
-#     print("this is where you sign in")
-# print (menu())
-
-
-# menu()
-# option = int(input("Enter your option: "))
-
-# while option !=0:
-#     if option == 1:
-#         pass
-#     elif option == 2:
-#         pass
-#     elif option == 3:
-#         pass
-#     else:
-#         pass
-# print()
-
-# menu = {}
-# menu['1']="Login" 
-# menu['2']="Signup"
-# menu['3']="Guest"
-# menu['4']="Exit"
-# while True: 
-#   options=menu.keys()
-#   options.sort()
-#     for entry in (options): 
-#         print (entry, menu[entry])
-
-#     selection=raw_input("Please Select:") 
-#     if selection =='1': 
-#       print ("Login")
-#     elif selection == '2': 
-#       print ("Signup")
-#     elif selection == '3':
-#       print ("Guest")
-#     elif selection == '4': 
-#       break
-#     else: 
-#       print ("Unknown Option Selected!")
